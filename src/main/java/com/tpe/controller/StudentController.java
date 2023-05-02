@@ -161,7 +161,7 @@ public class StudentController {
 
     }
 
-    //!!! view
+    //!!! view-LOGGER deneme
     @GetMapping("/welcome") //http://localhost:8080/students/welcome + GET
     //HttpServletRequest gelen request üzerinden herhangi bi dataya ulasmak istiyorsak.
     public String welcome(HttpServletRequest request){

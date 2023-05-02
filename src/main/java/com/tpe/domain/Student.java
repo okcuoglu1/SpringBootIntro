@@ -8,6 +8,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 //Class seviye annolardır. Tüm variablelar icin gelir.
 
@@ -45,6 +47,11 @@ public class Student {
 
     //@Setter(AccessLevel.NONE) //createDate nin setterı calısmasın demiş olduk.
     private LocalDateTime createDate = LocalDateTime.now(); //DB de olusturulma tarihi
+
+
+    @OneToMany(mappedBy = "student")
+    private List<Book> book = new ArrayList<>();
+
 
     //Getter -setter
 
