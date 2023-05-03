@@ -19,7 +19,7 @@ public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Enumerated(EnumType.STRING) //Name fieldini enum typedan al demiş olduk. EnumType.STRING-> DB'ye string olarak kaydolsun demiş olduk.
     @Column(length = 30, nullable = false)

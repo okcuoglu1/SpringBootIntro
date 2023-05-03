@@ -39,9 +39,13 @@ public class User {
     @JoinTable(name="tbl_user_role",
             joinColumns = @JoinColumn(name="user_id"),
             inverseJoinColumns = @JoinColumn(name="role_id"))
+
+    //User cekildiğinde rolleri de gelsin diye eagera çektik. Set olmasının sebebi degerler unique olsun diye.
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Role> role = new HashSet<>(); // Admin ; Student
 
+
+    //Bir öğrencinin bir userı olur yani sisteme aynı emaille giriş yapılamaz.
     @JsonIgnore
     @OneToOne(mappedBy = "user")
     private Student student;
