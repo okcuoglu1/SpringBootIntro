@@ -21,8 +21,9 @@ public class Role {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING) //Name fieldini enum typedan al demiş olduk. EnumType.STRING-> DB'ye string olarak kaydolsun demiş olduk.
     @Column(length = 30, nullable = false)
+    //Alabilceği role leri kısıtlamıs olduk.Enum typle ile
     private UserRole name;
 
     @Override
